@@ -1,151 +1,52 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aldahir Medina | Dev</title>
-    <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; scroll-behavior: smooth; }
-        body {
-            font-family: 'Courier New', Courier, monospace;
-            background: #0d1117;
-            color: #c9d1d9;
-            transition: 0.3s;
-            background-image: linear-gradient(rgba(0,255,0,0.03) 1px, transparent 1px);
-            background-size: 100% 20px;
-        }
-        .light { background: #f6f8fa; color: #24292e; }
-        .light .card, .light .project { background: #ffffff; border: 1px solid #d0d7de; }
-
-        nav {
-            background: #161b22; padding: 15px; position: sticky; top: 0; z-index: 100;
-            display: flex; justify-content: space-between; align-items: center;
-        }
-        .light nav { background: #ffffff; border-bottom: 1px solid #d0d7de; }
-        nav a { color: #58a6ff; text-decoration: none; margin: 0 10px; }
-        nav a:hover { text-decoration: underline; }
-        button {
-            background: #238636; color: white; border: none; padding: 8px 15px;
-            border-radius: 6px; cursor: pointer; font-family: inherit;
-        }
-        button:hover { background: #2ea043; transform: scale(1.05); }
-
-        .container { max-width: 900px; margin: auto; padding: 20px; }
-        .hero { text-align: center; padding: 80px 20px; }
-        .hero img {
-            width: 150px; height: 150px; border-radius: 50%;
-            border: 3px solid #58a6ff; margin-bottom: 20px;
-        }
-        .hero h1 { font-size: 3em; color: #58a6ff; }
-        .hero p { font-size: 1.2em; margin: 10px 0 20px; }
-        
-        .card, .project {
-            background: #161b22; border-left: 4px solid #58a6ff;
-            padding: 20px; margin: 20px 0; border-radius: 10px;
-            animation: fadeIn 0.8s ease-in;
-            transition: 0.3s;
-        }
-        .card:hover, .project:hover { transform: translateY(-5px); }
-        @keyframes fadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); }
-
-        .skill-item { margin: 15px 0; }
-        .skills-bar { background: #21262d; border-radius: 10px; height: 25px; overflow: hidden; }
-        .skills-fill { 
-            background: linear-gradient(90deg, #58a6ff, #238636); 
-            height: 100%; border-radius: 10px; 
-            text-align: right; padding-right: 10px; color: white;
-            font-weight: bold; transition: width 1s ease-in-out;
-        }
-
-        .projects-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; }
-        .project a { color: #58a6ff; text-decoration: none; font-weight: bold; }
-
-        .contact-btn { 
-            display: inline-block; margin: 10px; padding: 12px 25px; 
-            background: #25D366; border-radius: 6px; color: white; text-decoration: none;
-        }
-        .contact-btn.github { background: #333; }
-        .contact-btn.email { background: #EA4335; }
-        footer { text-align: center; padding: 30px; margin-top: 50px; border-top: 1px solid #30363d; }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Aldahir Medina | Dev</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box;scroll-behavior:smooth}
+body{font-family:'Courier New',monospace;background:#0d1117;color:#c9d1d9;transition:0.3s;background-image:linear-gradient(rgba(0,255,0,0.03) 1px,transparent 1px);background-size:100% 20px}
+.light{background:#f6f8fa;color:#24292e}
+.light .card,.light .project{background:#fff;border:1px solid #d0d7de}
+nav{background:#161b22;padding:15px;position:sticky;top:0;z-index:100;display:flex;justify-content:space-between;align-items:center}
+.light nav{background:#fff;border-bottom:1px solid #d0d7de}
+nav a{color:#58a6ff;text-decoration:none;margin:0 10px}
+button{background:#238636;color:white;border:none;padding:8px 15px;border-radius:6px;cursor:pointer;font-family:inherit}
+.container{max-width:900px;margin:auto;padding:20px}
+.hero{text-align:center;padding:80px 20px}
+.hero img{width:150px;height:150px;border-radius:50%;border:3px solid #58a6ff;margin-bottom:20px}
+.hero h1{font-size:2.5em;color:#58a6ff}
+.card,.project{background:#161b22;border-left:4px solid #58a6ff;padding:20px;margin:20px 0;border-radius:10px}
+.skill-item{margin:15px 0}
+.skills-bar{background:#21262d;border-radius:10px;height:25px;overflow:hidden;margin-top:5px}
+.skills-fill{background:linear-gradient(90deg,#58a6ff,#238636);height:100%;border-radius:10px;text-align:right;padding-right:10px;color:white;font-weight:bold;line-height:25px}
+.projects-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:20px}
+.project a{color:#58a6ff;text-decoration:none;font-weight:bold}
+.contact-btn{display:inline-block;margin:10px;padding:12px 25px;background:#25D366;border-radius:6px;color:white;text-decoration:none}
+.contact-btn.github{background:#333}
+.contact-btn.email{background:#EA4335}
+footer{text-align:center;padding:30px;margin-top:50px;border-top:1px solid #30363d}
+</style>
 </head>
 <body>
-    <nav>
-        <div><b>Aldahir.dev</b></div>
-        <div>
-            <a href="#sobre">Sobre</a>
-            <a href="#skills">Skills</a>
-            <a href="#proyectos">Proyectos</a>
-            <a href="#contacto">Contacto</a>
-            <button onclick="document.body.classList.toggle('light')">🌙</button>
-        </div>
-    </nav>
-
-    <div class="container">
-        <section class="hero">
-            <img src="https://github.com/aldahirmedina-dev.png" alt="Aldahir">
-            <h1>Hola, soy Aldahir Medina 👋</h1>
-            <p>Desarrollador | Termux | Python | Creando desde Moquegua para el mundo</p>
-            <a href="#contacto"><button>Contrátame</button></a>
-        </section>
-
-        <section id="sobre" class="card">
-            <h2>🚀 Sobre Mí</h2>
-            <p>Programador nocturno. Empecé en Termux y ahora construyo cosas para internet. Me gusta el código limpio, el café y resolver bugs a las 3am.</p>
-        </section>
-
-        <section id="skills" class="card">
-            <h2>💻 Skills</h2>
-            <div class="skill-item">
-                <p>Python</p>
-                <div class="skills-bar"><div class="skills-fill" style="width: 90%;">90%</div></div>
-            </div>
-            <div class="skill-item">
-                <p>HTML/CSS</p>
-                <div class="skills-bar"><div class="skills-fill" style="width: 85%;">85%</div></div>
-            </div>
-            <div class="skill-item">
-                <p>Flask</p>
-                <div class="skills-bar"><div class="skills-fill" style="width: 80%;">80%</div></div>
-            </div>
-            <div class="skill-item">
-                <p>Git/GitHub</p>
-                <div class="skills-bar"><div class="skills-fill" style="width: 75%;">75%</div></div>
-            </div>
-        </section>
-
-        <section id="proyectos" class="card">
-            <h2>📂 Mis Proyectos</h2>
-            <div class="projects-grid">
-                <div class="project">
-                    <h3>🤖 Bot de Termux</h3>
-                    <p>Automatización de tareas desde el celular.</p>
-                    <a href="https://github.com/aldahirmedina-dev" target="_blank">Ver en GitHub →</a>
-                </div>
-                <div class="project">
-                    <h3>🌐 Portafolio v1</h3>
-                    <p>Este mismo portafolio. Hecho 100% en Termux.</p>
-                    <a href="https://github.com/aldahirmedina-dev/mi-portafolio" target="_blank">Ver Código →</a>
-                </div>
-                <div class="project">
-                    <h3>📊 Dashboard Flask</h3>
-                    <p>Panel de control con Python y gráficos.</p>
-                    <a href="#" target="_blank">Ver Demo →</a>
-                </div>
-            </div>
-        </section>
-
-        <section id="contacto" class="card">
-            <h2>📬 Contacto</h2>
-            <p>¿Tienes un proyecto? Hablemos.</p>
-            <a href="https://wa.me/51928637808" class="contact-btn" target="_blank">💬 WhatsApp</a>
-            <a href="mailto:medina.aldahir340@gmail.com" class="contact-btn email">📧 Email</a>
-            <a href="https://github.com/aldahirmedina-dev" class="contact-btn github" target="_blank">💻 GitHub</a>
-        </section>
-    </div>
-
-    <footer>
-        <p>Hecho con ❤️ y mucho café en Moquegua, Perú | 2026</p>
-    </footer>
-</body>
-</html>
+<nav><div><b>Aldahir.dev</b></div><div><a href="#sobre">Sobre</a><a href="#skills">Skills</a><a href="#proyectos">Proyectos</a><a href="#contacto">Contacto</a><button onclick="document.body.classList.toggle('light')">🌙</button></div></nav>
+<div class="container">
+<section class="hero"><img src="https://github.com/aldahirmedina-dev.png"><h1>Hola, soy Aldahir Medina 👋</h1><p>Desarrollador | Termux | Python | Creando desde Moquegua</p><a href="#contacto"><button>Contrátame</button></a></section>
+<section id="sobre" class="card"><h2>🚀 Sobre Mí</h2><p>Programador nocturno. Empecé en Termux y ahora construyo cosas para internet.</p></section>
+<section id="skills" class="card"><h2>💻 Skills</h2>
+<div class="skill-item"><p>Python</p><div class="skills-bar"><div class="skills-fill" style="width:90%">90%</div></div></div>
+<div class="skill-item"><p>HTML/CSS</p><div class="skills-bar"><div class="skills-fill" style="width:85%">85%</div></div></div>
+<div class="skill-item"><p>Flask</p><div class="skills-bar"><div class="skills-fill" style="width:80%">80%</div></div></div>
+<div class="skill-item"><p>Git/GitHub</p><div class="skills-bar"><div class="skills-fill" style="width:75%">75%</div></div></div></section>
+<section id="proyectos" class="card"><h2>📂 Mis Proyectos</h2><div class="projects-grid">
+<div class="project"><h3>🤖 Bot de Termux</h3><p>Automatización desde el celular.</p><a href="https://github.com/aldahirmedina-dev">Ver GitHub →</a></div>
+<div class="project"><h3>🌐 Portafolio v1</h3><p>Hecho 100% en Termux.</p><a href="https://github.com/aldahirmedina-dev/mi-portafolio">Ver Código →</a></div>
+<div class="project"><h3>📊 Dashboard Flask</h3><p>Panel con Python.</p><a href="#">Ver Demo →</a></div></div></section>
+<section id="contacto" class="card"><h2>📬 Contacto</h2><p>¿Tienes un proyecto? Hablemos.</p>
+<a href="https://wa.me/51928637808" class="contact-btn" target="_blank">💬 WhatsApp</a>
+<a href="mailto:medina.aldahir340@gmail.com" class="contact-btn email">📧 Email</a>
+<a href="https://github.com/aldahirmedina-dev" class="contact-btn github" target="_blank">💻 GitHub</a></section>
+</div>
+<footer><p>Hecho con ❤️ en Moquegua, Perú | 2026</p></footer>
+</body></html>
