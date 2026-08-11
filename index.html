@@ -5,28 +5,46 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Aldahir Medina | Dev</title>
 <style>
-*{margin:0;padding:0;box-sizing:border-box;scroll-behavior:smooth}
-body{font-family:'Courier New',monospace;background:#0d1117;color:#c9d1d9;transition:0.3s;background-image:linear-gradient(rgba(0,255,0,0.03) 1px,transparent 1px);background-size:100% 20px}
-.light{background:#f6f8fa;color:#24292e}
-.light .card,.light .project{background:#fff;border:1px solid #d0d7de}
-nav{background:#161b22;padding:15px;position:sticky;top:0;z-index:100;display:flex;justify-content:space-between;align-items:center}
-.light nav{background:#fff;border-bottom:1px solid #d0d7de}
-nav a{color:#58a6ff;text-decoration:none;margin:0 10px}
-button{background:#238636;color:white;border:none;padding:8px 15px;border-radius:6px;cursor:pointer;font-family:inherit}
-.container{max-width:900px;margin:auto;padding:20px}
-.hero{text-align:center;padding:80px 20px}
-.hero img{width:150px;height:150px;border-radius:50%;border:3px solid #58a6ff;margin-bottom:20px}
-.hero h1{font-size:2.5em;color:#58a6ff}
-.card,.project{background:#161b22;border-left:4px solid #58a6ff;padding:20px;margin:20px 0;border-radius:10px}
-.skill-item{margin:15px 0}
-.skills-bar{background:#21262d;border-radius:10px;height:25px;overflow:hidden;margin-top:5px}
-.skills-fill{background:linear-gradient(90deg,#58a6ff,#238636);height:100%;border-radius:10px;text-align:right;padding-right:10px;color:white;font-weight:bold;line-height:25px}
-.projects-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:20px}
-.project a{color:#58a6ff;text-decoration:none;font-weight:bold}
-.contact-btn{display:inline-block;margin:10px;padding:12px 25px;background:#25D366;border-radius:6px;color:white;text-decoration:none}
-.contact-btn.github{background:#333}
-.contact-btn.email{background:#EA4335}
-footer{text-align:center;padding:30px;margin-top:50px;border-top:1px solid #30363d}
+* { margin: 0; padding: 0; box-sizing: border-box; scroll-behavior: smooth; }
+body { font-family: 'Courier New', monospace; background: #0d1117; color: #c9d1d9; transition: 0.3s; background-image: linear-gradient(rgba(0,255,0,0.03) 1px, transparent 1px); background-size: 100% 20px; }
+.light { background: #f6f8fa; color: #24292e; }
+.light .card, .light .project { background: #fff; border: 1px solid #d0d7de; }
+
+nav { background: #161b22; padding: 15px; position: sticky; top: 0; z-index: 100; display: flex; justify-content: space-between; align-items: center; }
+.light nav { background: #fff; border-bottom: 1px solid #d0d7de; }
+nav a { color: #58a6ff; text-decoration: none; margin: 0 10px; }
+button { background: #238636; color: white; border: none; padding: 8px 15px; border-radius: 6px; cursor: pointer; }
+
+.container { max-width: 900px; margin: auto; padding: 20px; }
+.hero { text-align: center; padding: 80px 20px; }
+.hero img { width: 150px; height: 150px; border-radius: 50%; border: 3px solid #58a6ff; margin-bottom: 20px; }
+.hero h1 { font-size: 2.5em; color: #58a6ff; }
+
+.card, .project { background: #161b22; border-left: 4px solid #58a6ff; padding: 20px; margin: 20px 0; border-radius: 10px; }
+
+/* ESTAS SON LAS BARRAS ARREGLADAS */
+.skill-item { margin: 20px 0; }
+.skill-item p { margin-bottom: 5px; font-weight: bold; }
+.skills-bar { width: 100%; background: #21262d; border-radius: 20px; height: 30px; overflow: hidden; }
+.skills-fill { 
+    height: 100%; 
+    background: linear-gradient(90deg, #58a6ff, #2ea043); 
+    border-radius: 20px; 
+    text-align: right; 
+    padding-right: 15px; 
+    color: white; 
+    font-weight: bold;
+    line-height: 30px;
+    transition: width 1.5s ease-in-out;
+}
+
+.projects-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; }
+.project a { color: #58a6ff; text-decoration: none; font-weight: bold; }
+
+.contact-btn { display: inline-block; margin: 10px; padding: 12px 25px; background: #25D366; border-radius: 6px; color: white; text-decoration: none; }
+.contact-btn.github { background: #333; }
+.contact-btn.email { background: #EA4335; }
+footer { text-align: center; padding: 30px; margin-top: 50px; border-top: 1px solid #30363d; }
 </style>
 </head>
 <body>
