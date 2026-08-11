@@ -1,0 +1,85 @@
+:root {
+  --bg: #0F172A;
+  --text: #E2E8F0;
+  --primary: #7C3AED;
+  --card: #1E293B;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  font-family: system-ui, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+}
+
+header {
+  padding: 1rem;
+  background: var(--card);
+  position: sticky;
+  top: 0;
+}
+
+nav {
+  max-width: 900px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav h2 span { color: var(--primary); }
+nav a { color: var(--text); text-decoration: none; }
+nav a:hover { color: var(--primary); }
+
+.hero {
+  min-height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 2rem;
+}
+
+.hero h1 { font-size: 2.5rem; }
+.hero h1 span { color: var(--primary); }
+
+.botones { margin-top: 1rem; }
+
+.btn {
+  background: var(--primary);
+  color: white;
+  padding: 12px 24px;
+  border-radius: 8px;
+  text-decoration: none;
+  margin: 0.5rem;
+  display: inline-block;
+  transition: 0.3s;
+}
+
+.btn:hover { transform: translateY(-3px); }
+.btn-outline { background: transparent; border: 2px solid var(--primary); }
+
+#proyectos, #contacto {
+  padding: 4rem 2rem;
+  max-width: 900px;
+  margin: auto;
+  text-align: center;
+}
+
+.card {
+  background: var(--card);
+  padding: 2rem;
+  border-radius: 12px;
+  margin-top: 2rem;
+}
+
+.card a { color: var(--primary); }
+
+footer {
+  text-align: center;
+  padding: 2rem;
+  background: var(--card);
+}
