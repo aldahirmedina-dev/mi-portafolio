@@ -1,3 +1,4 @@
+rm index.html style.css
 cat > index.html << 'EOF'
 <!DOCTYPE html>
 <html lang="es">
@@ -5,7 +6,7 @@ cat > index.html << 'EOF'
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Aldahir Medina - Dev</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css?v=4">
 </head>
 <body>
   <div class="container">
@@ -14,35 +15,39 @@ cat > index.html << 'EOF'
       <p>Desarrollador Web Frontend de Moquegua PE</p>
       <a href="#proyectos" class="btn">Ver Proyectos</a>
     </section>
-
     <section class="section" id="proyectos">
       <h2>Mis Proyectos</h2>
       <div class="grid">
-        <div class="card">
-          <h3>Portafolio Web</h3>
-          <p>Hecho con HTML, CSS y JS puro. 100% Responsive.</p>
-        </div>
-        <div class="card">
-          <h3>E-commerce</h3>
-          <p>Tienda online con carrito y pasarela de pago.</p>
-        </div>
-        <div class="card">
-          <h3>Landing Page</h3>
-          <p>Diseño minimalista para captar clientes.</p>
-        </div>
+        <div class="card"><h3>Portafolio Web</h3><p>Hecho con HTML, CSS y JS puro. 100% Responsive.</p></div>
+        <div class="card"><h3>E-commerce</h3><p>Tienda online con carrito y pasarela de pago.</p></div>
+        <div class="card"><h3>Landing Page</h3><p>Diseño minimalista para captar clientes.</p></div>
       </div>
     </section>
-
     <section class="section">
       <h2>Contáctame</h2>
       <p>¿Tienes un proyecto? Escríbeme</p>
       <a href="mailto:medina.aldahir340@gmail.com" class="btn">medina.aldahir340@gmail.com</a>
     </section>
-
-    <footer>
-      <p>© 2026 Aldahir Medina</p>
-    </footer>
+    <footer><p>© 2026 Aldahir Medina</p></footer>
   </div>
 </body>
 </html>
+EOF
+cat > style.css << 'EOF'
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap');
+:root{--bg:#0A0A0A;--card:#111111;--text:#EDEDED;--text-2:#A1A1A1;--accent:#6366f1;--border:#1F1F1F;}
+*{margin:0;padding:0;box-sizing:border-box;}
+body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--text);}
+.container{max-width:1100px;margin:0 auto;padding:0 24px;}
+.hero{padding:140px 0 100px;background:radial-gradient(800px 400px at 20% 20%, rgba(99,102,241,0.15), transparent);}
+.hero h1{font-size:4rem;font-weight:900;letter-spacing:-3px;margin-bottom:24px;}
+.hero p{font-size:1.25rem;color:var(--text-2);max-width:600px;margin-bottom:40px;}
+.btn{display:inline-block;padding:14px 28px;background:var(--accent);color:white;border-radius:8px;text-decoration:none;font-weight:600;}
+.btn:hover{transform:translateY(-2px);box-shadow:0 10px 30px rgba(99,102,241,0.3);}
+.section{padding:100px 0;border-top:1px solid var(--border);}
+.section h2{font-size:2.5rem;font-weight:700;text-align:center;margin-bottom:60px;}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:24px;}
+.card{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:32px;transition:0.3s;}
+.card:hover{border-color:var(--accent);transform:translateY(-4px);}
+footer{padding:60px 0;text-align:center;color:var(--text-2);border-top:1px solid var(--border);}
 EOF

@@ -76,3 +76,145 @@ if($_POST["user"]=="admin" && $_POST["pass"]=="123456"){
 }
 ?>' > login.php
 php -S 127.0.0.1:8080
+nano style.css
+git add .
+git commit -m "diseño pro completo"
+git push
+git config --global credential.helper store
+git pull origin main --allow-unrelated-histories
+[200~git checkout --ours bot.js style.css
+git add bot.js style.css~
+git checkout --ours .
+git add .
+git commit -m "solucionado: mi version del portafolio"
+git push origin main
+cd mi-portafolio
+idaaaaa
+ls
+cat > style.css << 'EOF'
+/* MINIMALISTA ESTILO LINEAR + VERCEL */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap');
+
+:root {
+  --bg: #0A0A0A;
+  --card: #111111;
+  --text: #EDEDED;
+  --text-2: #A1A1A1;
+  --accent: #6366f1;
+  --border: #1F1F1F;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  font-family: 'Inter', sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* HERO MINIMAL */
+.hero {
+  padding: 140px 0 100px;
+  text-align: left;
+  background: radial-gradient(800px 400px at 20% 20%, rgba(99,102,241,0.15), transparent);
+}
+
+.hero h1 {
+  font-size: 4rem;
+  font-weight: 900;
+  letter-spacing: -3px;
+  line-height: 1.1;
+  margin-bottom: 24px;
+}
+
+.hero p {
+  font-size: 1.25rem;
+  color: var(--text-2);
+  max-width: 600px;
+  margin-bottom: 40px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 14px 28px;
+  background: var(--accent);
+  color: white;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.2s;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 30px rgba(99,102,241,0.3);
+}
+
+/* SECCIONES */
+.section {
+  padding: 100px 0;
+  border-top: 1px solid var(--border);
+}
+
+.section h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  letter-spacing: -1px;
+  margin-bottom: 60px;
+}
+
+/* GRID DE PROYECTOS */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 24px;
+}
+
+.card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 32px;
+  transition: all 0.3s;
+}
+
+.card:hover {
+  border-color: var(--accent);
+  transform: translateY(-4px);
+}
+
+.card h3 {
+  font-size: 1.5rem;
+  margin-bottom: 12px;
+}
+
+.card p {
+  color: var(--text-2);
+}
+
+/* FOOTER */
+footer {
+  padding: 60px 0;
+  text-align: center;
+  color: var(--text-2);
+  border-top: 1px solid var(--border);
+}
+EOF
+
+ls
+git add style.css
+git commit -m "diseño minimalista v2"
+git push origin main
+git add style.css
+git commit -m "diseño minimalista v2"
+git push origin main
+git log --oneline
+cat index.html | grep style
