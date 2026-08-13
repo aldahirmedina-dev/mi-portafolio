@@ -218,3 +218,62 @@ git commit -m "diseño minimalista v2"
 git push origin main
 git log --oneline
 cat index.html | grep style
+cat > index.html << 'EOF'
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aldahir Medina - Dev</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <section class="hero">
+      <h1>Hola, soy <span style="color:var(--accent)">Aldahir Medina</span></h1>
+      <p>Desarrollador Web Frontend de Moquegua PE</p>
+      <a href="#proyectos" class="btn">Ver Proyectos</a>
+    </section>
+
+    <section class="section" id="proyectos">
+      <h2>Mis Proyectos</h2>
+      <div class="grid">
+        <div class="card">
+          <h3>Portafolio Web</h3>
+          <p>Hecho con HTML, CSS y JS puro. 100% Responsive.</p>
+        </div>
+        <div class="card">
+          <h3>E-commerce</h3>
+          <p>Tienda online con carrito y pasarela de pago.</p>
+        </div>
+        <div class="card">
+          <h3>Landing Page</h3>
+          <p>Diseño minimalista para captar clientes.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Contáctame</h2>
+      <p>¿Tienes un proyecto? Escríbeme</p>
+      <a href="mailto:medina.aldahir340@gmail.com" class="btn">medina.aldahir340@gmail.com</a>
+    </section>
+
+    <footer>
+      <p>© 2026 Aldahir Medina</p>
+    </footer>
+  </div>
+</body>
+</html>
+EOF
+
+nano index.html
+style.css
+nano style.css
+git add index.html style.css
+git commit -m "v3: Portafolio minimalista Linear completo"
+git push origin main
+nano index.html
+git add -A
+git commit -m "v4: Reset total diseño minimalista negro"
+git push origin main
